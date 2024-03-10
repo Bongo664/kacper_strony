@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+    body, html{
+      padding: 0;
+      margin:0;
+      box-sizing: border-box;
+    }
+    header{
+      display: flex;
+      width: 100%;
+      margin: 0 auto 0 auto;
+    }
+    .navbar{
+      display: flex;
+      list-style: none;
+      margin: 30px 5% 40px 0;
+    }
+    .open{
+      font-family:'Open Sans', sans-serif;
+    }
+    .logoWrapper{
+      margin-left: 5%;
+    }
+    .logoWrapper, nav{
+      width: 50%;
+    }
+    nav{
+      display: flex;
+      justify-content: end;
+    }
+    .navbar li{
+      padding: 0 0 0 30px;
+    }
+    .hero{
+      padding: 80px 0 80px 0;
+    }
+    .heroWrapper{
+      display: flex;
+      width: 1440px;
+      margin: 0 auto 0 auto;
+    }
+    .heroLeft, .heroRight{
+      width: 50%;
+
+    }
+    .logoWrapper{
+      display: flex;
+      align-items: center;
+    }
+    .heroRight img{
+      width: 100%;
+    }
+    .heroLeft{
+      display: flex;
+      align-items: center;
+    }
+    .heroLeft__wrapper{
+      padding-right: 40px;
+    }
+    .heroLeft__wrapper h1{
+      font-size: 2.6rem;
+    }
+    .heroLeft__wrapper p{
+      font-size: 1.3rem;
+    }
+    .heroInput__wrapper input{
+      width: 55%;
+      padding: 10px 20px 10px 20px;
+      border-radius: 5px;
+    }
+    .heroInput__wrapper a{
+      background-color: hsl(224, 93%, 58%);
+      color: white;
+      padding: 10px 50px 10px 50px;
+      text-decoration: none;
+      margin-left: 10px;
+      font-weight: bold;
+    }    
+    .huj{
+      font-size: 2.55rem;
+    }
+    .content{
+      background-color: hsl(240, 75%, 98%);
+    }
+    .contentWrapper{
+      width: 1440px;
+      margin: 0 auto 0 auto;
+      display: flex;
+    }
+    .contentRight, .contentLeft{
+      width: 50%;
+    }
+    .contentRight img{
+      width: 100%;
+    }
+    .contentLeft__wrapper a{
+      color: #359a84;
+      text-decoration: none;
+      border-bottom: solid 1px #359a84;
+      padding-bottom: 3px;
+    }
+    .contentLeft__wrapper p{
+      padding-right: 160px;
+      line-height: 1.6rem;
+    }
+    .wave__wrapper{
+      width: 100%;
+    }
+    .wave__wrapper img{
+      width: 100%;
+      margin-bottom: -5px;
+    }
+    .comment{
+      max-width: 45%;
+      background-color: white;
+      padding: 30px;
+      margin-top: 80px;
+      margin-bottom: 80px;
+      border-radius: 5px;
+    }
+    .commentWrapper img{
+      width: 20px;
+    }
+    .author{
+      display: flex;
+    }
+    .authorLeft img{
+      width: 32px;
+      border-radius: 100%;
+    }
+    .authorRight h4{
+      font-size: .75rem
+    }
+    .authorRight p{
+      font-size: .65rem;
+    }
+    .commentWrapper p{
+      padding: 0;
+      font-size: .85rem;
+    }
+    .authorRight h4, .authorRight p{
+      margin: 0;
+      padding: 0;
+    }
+    .authorRight{
+      padding-left: 10px;
+    }
+    .raleway{
+      font-family: 'Raleway',sans-serif;
+    }
+
+    .access{
+      background-color: #575989;
+    }
+    .accessWrapper{
+      width: 1440px;
+      margin: 0 auto 0 auto;
+      display: flex;
+      padding: 80px 0 80px 0;
+    }
+    .accessLeft{
+      color: white;
+      width: 55%;
+    }
+    .accessRight{
+      width: 45%;
+
+    }
+    .accessLeft h3{
+      font-size: 2.2rem;
+    }
+    .accessLeft p{
+      padding-right: 280px;
+    }
+    .accessRight__input{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .accessRight__input input{
+      width: 80%;
+      padding: 10px 20px 10px 20px;
+
+    }
+    .accessRight a{
+      background-color: hsl(224, 93%, 58%);
+      color: white;
+      padding: 10px 50px 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer{
+      background-color: #07043b;
+      color: white;
+      padding: 80px 0 80px 0;
+    }
+    .footerWrapper{
+      width: 1440px;
+      margin: 0 auto 0 auto;
+      display: flex;
+    }
+    .footerWrapper__logo{
+      width: 1440px;
+      margin: 0 auto 0 auto;
+    }
+    .footerWrapper__logo img{
+      filter: brightness(0) invert(1);
+    }
+    .col1{
+      width: 40%;
+    }
+    .col4, .col2, .col3{
+      width: 15%;
+    }
+    .col2 nav ul, .col3 nav ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;      
+    }
+    .col2 nav ul li, .col3 nav ul li{
+      padding: 10px 0 10px 0;
+    }
+    .col2 nav, .col3 nav{
+      display: flex;
+      justify-content: start;
+    }
+    .col1 a{
+      color: white;
+      text-decoration: none;
+    }
+    .col1 img{
+      padding-right: 10px;
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @media  screen and (max-width:1000px){
+      .heroWrapper{
+        flex-direction: column-reverse;
+      }
+      .contentWrapper{
+        flex-direction: column-reverse;
+        width: 375px;
+      }
+      .accessWrapper{
+        flex-direction: column;
+      }
+      .accessRight__input{
+        width: 100%;
+      }
+      .access{
+        width: 100%;
+      }
+      body{
+        font-size: 10px;
+      }
+      .heroRight{
+        width: 25%;
+      }
+      .contentRight{
+        width: 100%;
+      }
+      .heroInput__wrapper{
+        flex-direction: column;
+      }
+      .raleway{
+        text-align: center;
+        width: 375px;
+      }
+      .nie{
+        text-align: center;
+        width: 375px;
+        margin: 0;
+        padding: 0;
+      }
+      .tak{
+        margin-left: 12.5px;
+      }
+      .accessRight__input{
+        width: 350px;
+        margin-left: 6.25px;
+      }
+      .heroWrapper{
+        width: 375px;
+      }
+      .heroRight{
+        width: 100%;
+      }
+      .heroLeft__wrapper{
+        padding: 0;
+      }
+      .contentLeft__wrapper{
+        width:375px;
+      }
+      .contentLeft__wrapper p{
+      padding-right: 0px;
+      line-height: 1.6rem;
+    }
+    .commentWrapper{
+      width: 350px;
+    }
+    .yes{
+      width: 315px;
+    }
+    .dwa{
+      width: 350px;
+        margin-left: 12.5px;
+        margin-right: 12.5px;
+        padding: 0px 0px 0px 0px;
+    }
+    .comment{
+      max-width: 90%;
+      background-color: white;
+      padding: 30px;
+      margin-top: 80px;
+      margin-bottom: 80px;
+      border-radius: 5px;
+    }
+    .accessWrapper{
+      width: 375px;
+    }
+    .accessLeft p{
+      padding: 0;
+    }
+    .footerWrapper__logo{
+      padding: 0;
+      width: 375px;
+    }
+    .col1{
+      width: 375px;
+    }
+    .footerWrapper{
+      width: 375px;
+    }
+    .jeden{
+      width: 70px;  
+    }
+    .trzy{
+      width: 200px;
+    }
+    .author{
+      width: 250px;
+    }
+    .guzik{
+      float: left;
+      width: 250px;
+      margin-top: 10px;
+      text-align: center;
+      margin-left: 10px;
+    }
+    .email{
+      margin-left: 10px;
+      margin-top: 10px;
+      width: 100%;
+    }
+    .heroInput__wrapper input{
+      width: 81.5%;
+    }
+    .zabij{
+      margin-left: 17px;
+      margin-top: 0;
+    }
+    }
+      
+  </style>
+</head>
+<body>
+<header>
+  <div class="logoWrapper">
+    <img src="images/logo.svg" alt="">
+  </div>
+  <nav>
+    <ul class="navbar raleway">
+      <li>Features</li>
+      <li>Team</li>
+      <li>Sign In</li>
+    </ul>
+  </nav>
+</header>
+<section class="hero">
+  <div class="heroWrapper">
+    <div class="heroLeft">
+    <div class="heroLeft__wrapper">
+      <h1 class="raleway">All your files in one secure location, accessible anywhere.</h1>
+      <p class="open nie">
+  Fylo stores your most important files in one secure location. 
+  Access them wherever you need, share and collaborate with friends, 
+  family, and co-workers.
+      </p>
+      <div class="heroInput__wrapper">
+        <input type="text" placeholder="enter your email..." class="email">
+        <a href="#" class="guzik">get started</a>
+      </div>
+    </div>
+  </div>
+    <div class="heroRight">
+      <img src="images/illustration-1.svg" alt="">
+    </div>
+  </div>
+</section>
+<section class="wave">
+  <div class="wave__wrapper">
+    <img src="images/bg-curve-desktop.svg" alt="">
+  </div>
+</section>
+<section class="content">
+  <div class="contentWrapper">
+    <div class="contentLeft">
+      <div class="contentLeft__wrapper">
+        <h2 class="raleway huj">Stay productive, wherever you are</h2>
+        <p class="open dwa">Never let location be an issue when accessing your files. Fylo has you 
+  covered for all of your file storage needs.</p>
+        <p class="open dwa">Securely share files and folders with friends, family and colleagues for 
+  live collaboration. No email attachments required!</p>
+        <a href="#" class="tak">See how Fylo works<img src="images/icon-arrow.svg" alt=""></a>
+        <div class="comment">
+          <div class="commentWrapper">
+            <img src="images/icon-quotes.svg" alt="">
+            <p class="open yes">
+  Fylo has improved our team productivity by an order of magnitude. Since 
+  making the switch our team has become a well-oiled collaboration machine.
+            </p>
+            <div class="author">
+              <div class="authorLeft">
+                <img src="images/avatar-testimonial.jpg">
+              </div>
+              <div class="authorRight">
+                <h4 class="raleway jeden">Kyle Burton</h4>
+                <p class="open trzy">Founder & CEO, Huddle</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentRight">
+      <img src="images/illustration-2.svg">
+    </div>
+  </div>
+</section>
+<section class="access">
+  <div class="accessWrapper">
+    <div class="accessLeft">
+      <h3 class="raleway">Get early access today</h3>
+      <p class="open nie">
+      It only takes a minute to sign up and our free starter tier is extremely generous. 
+      If you have any questions, our support team would be happy to help you.
+    </p>
+  </div>
+    <div class="accessRight">
+      <div class="accessRight__input">
+      <input type="text" placeholder="email@egzample.com" class="email">
+    </div>
+      <a href="#" class="guzik zabij">Get Started For Free</a>
+    </div>
+  </div>
+</section>
+<footer>
+<div class="footerWrapper__logo">
+  <img src="images/logo.svg" alt="">
+</div>
+<div class="footerWrapper">
+  <div class="col1">
+    <p class="open dwa"><img src="images/icon-phone.svg"> Phone:<a href="tel: +1-543-123-4567">+1-543-123-4567</a> </p>
+    <p class="open dwa"><img src="images/icon-email.svg"> <a href="mailto:example@fylo.com">example@fylo.com</a></p>
+  </div>
+
+</div>
+  </footer>
+</body>
+</html>
