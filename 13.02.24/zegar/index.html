@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+    div{
+        font-family: "Bungee Spice", sans-serif;
+        font-size: 128px;
+        display: flex;
+    }
+    #clock{
+        justify-content: end;
+        margin-top: 40vh;
+    }
+</style>
+<body onload="updateClock()">
+    <div id="clock">
+        <div id="hours">00</div>
+        <div id="minutes">00</div>
+        <div id="seconds">00</div>
+    </div>
+    <script>
+        function updateClock(){
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            if(hours < 10){
+                hours = "0" + hours
+            }
+            else{
+                hours = hours
+            }
+            if(minutes < 10){
+                minutes = "0" + minutes
+            }
+            else{
+                minutes = minutes
+            }
+            if(seconds < 10){
+                seconds = "0" + seconds
+            }
+            else{
+                seconds = seconds
+            }
+
+            document.getElementById("hours").textContent = hours + ":";
+            document.getElementById("minutes").textContent = minutes + ":";
+            document.getElementById("seconds").textContent = seconds;
+
+
+        }            setInterval(updateClock,1000);
+            updateClock();
+    </script>
+</body>
+</html>

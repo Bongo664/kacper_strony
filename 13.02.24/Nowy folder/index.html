@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="number" name="" id="a">podstawa</input> 
+<input type="number" name="" id="b">liczba poteng</input>
+<button onclick="GenerujTablice()">zobacz</button>
+<div id="wynik"></div>
+</body>
+
+<script>
+    /*for(let i=1; i<=10; i++){
+        console.log(i);
+    }
+    let liczba;
+    do{
+        liczba = prompt("podaj liczbe wieksza od 10:", "");
+    }
+    while(liczba <=10);
+    console.log("Dziękuje!")
+    function Szukaj(){
+        let liczba;
+        let proby = 0;
+        do{
+            liczba = Math.floor(Math.random()*5)+1;
+            proby++;
+            console.log(`próbra ${proby}: ${liczba}`);
+        }
+        while(liczba !== 3);
+        console.log(`znaleziono liczbe 3 po ${proby} probach`)
+    }*/
+    /*for(let i=1; i * i++;){
+        console.log(i)
+    }
+    for (let i = 1; i <= 10; i++) {
+  let row = "";
+  for (let j = 0; j < i; j++) {
+    row += "*";
+  }
+  console.log(row);
+}
+for (let row = 10; row > 0; row--) {
+  let str = '';
+  for (let col = 0; col < row; col++) {
+    str += '*';
+  }
+  console.log(str);
+} 
+for(let p=100;p>0;p-=10){
+    console.log(p)
+}*/
+function GenerujTablice(){
+    let a = document.getElementById('a').value;
+    let b = document.getElementById('b').value;
+
+    let tablica=[];
+    for(let i=0;i<b;i++){
+        tablica[i] = Math.pow(a,i)
+    }
+    return tablica;
+    document.getElementById('wynik').innerText= "Wynik" + tablica;
+}
+
+
+</script>
+</html>
