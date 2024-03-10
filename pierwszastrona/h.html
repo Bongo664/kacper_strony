@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uczę się programować dla pieniędzy</title>
+</head>
+<style>
+    
+    html,body{
+    padding: 0;
+    margin: 0;
+    background-color: #333533;
+}
+@media (min-width:300px){
+    nav{
+        width: 100vw;
+    }
+    .container{
+        width: 100vw;
+        display: block;
+    }
+
+}
+nav{
+    padding: 20px;
+    margin: 0%;
+    background-color: #FFD100;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    
+}
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    width: 100%;
+}
+
+.Jakub{
+    width: 250vw;
+    height: 500px;
+    padding: 20px;
+    margin-left: 230px;
+    margin-top: 50px;
+    border-radius: 5%;
+    background-color: #202020;
+    color:white;
+    text-align: center;
+}
+.Jakub:hover{
+    width: 250vw;
+    height: 500px;
+    padding: 20px;
+    margin-left: 230px;
+    margin-top: 50px;
+    border-radius: 5%;
+    background-color: #202020;
+    color:white;
+    text-align: center;
+    border: 1px solid #FFD100;
+}
+.Bartek{
+    width: 250px;
+    height: 500px;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 50px;
+    border-radius: 5%;
+    background-color: #202020;
+    color:white;
+    text-align: center;
+}
+.Mateusz{
+    width: 250px;
+    height: 500px;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 5%;
+    background-color: #202020;
+    color:white;
+    text-align: center;
+}
+.Tomek{
+    width: 250px;
+    height: 500px;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 50px;
+    border-radius: 5%;
+    background-color: #202020;
+    color:white;
+    text-align: center;
+}
+.Michał{
+    width: 250px;
+    height: 500px;
+    padding: 20px;
+    margin-right: 230px;
+    margin-top: 50px;
+    border-radius: 5%;
+    background-color: #202020;
+    color:white;
+    text-align: center;
+}
+img{
+    border-radius: 150%;
+    padding: 3px;
+    background-color: #FFD100;
+    width: 200px;
+    height: 200px;
+}
+
+p{
+    float: left ;
+    font-size: 18px;
+}
+h1{
+    float:left ;
+    font-size: 24px;
+}
+footer{
+    background-color: #FFD100;
+    width: 100%;
+    margin-top: 100px;
+    padding-bottom: 30px;
+    bottom: 0%;
+    text-align: center;
+    color: #202020;
+    font-size: 24px;
+}
+.main{
+    background-color: #202020;
+    color: white;
+    margin-left: 230px;
+    margin-right: 230px;
+    margin-top: 100px;
+    overflow-y: scroll;
+    height: 400px;
+    width: 1347px;
+}
+
+button:hover{
+    background-color: #202020;
+    border: 1px solid #FFD100;
+    color: white;
+}
+button{
+    background-color: #FFD100;
+}
+.wrappertable{
+    width: 80%;
+}
+.tabelka{
+    display: flex; 
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    
+}
+.mapa{
+    width: 100%;
+}
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-corner {
+background: #555;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #555;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+
+  .Tabela{
+    background-color: #202020;
+    margin: 20px;
+    border-radius: 10px;
+    height: 35vh;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .scroll{
+    overflow-x: scroll;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .Tabele{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 250%;
+  }
+
+  .Tabela1{
+    border: solid 2px #d6bb22;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .Tabela1 tr:last-child, .Tabela1 tr:nth-child(2){
+    background-color: #d6bb22;
+    color: #202020;
+  }
+
+  .Tabela1 tr:nth-child(2) td:first-child,  .Tabela1 tr:nth-child(2) td:last-child,   .Tabela1 tr:nth-child(4) td:first-child,  .Tabela1 tr:nth-child(4) td:last-child{
+    color: green;
+  }
+
+  .Tabela1 tr:nth-child(3) td:nth-child(2){
+    color:red;
+  }
+
+  .Tabela1 td, .Tabela1 th
+  {
+padding: 20px;
+width: 200px;
+border: solid 2px #222;
+  }
+
+  .Tabela2{
+    border: solid 2px #d6bb22;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .Tabela2 tr:first-child, .Tabela2 tr:nth-child(3){
+    background-color: #d6bb22;
+    color: #202020;
+  }
+
+  .Tabela2 tr:nth-child(2) td:first-child,  .Tabela2 tr:nth-child(2) td:last-child,   .Tabela2 tr:nth-child(4) td:first-child,  .Tabela2 tr:nth-child(4) td:last-child{
+    color: red;
+  }
+
+  .Tabela2 tr:nth-child(3) td:nth-child(2){
+    color:green;
+  }
+
+  .Tabela2 td, .Tabela2 th
+  {
+padding: 20px;
+width: 200px;
+border: solid 2px #222;
+  }
+</style>
+<body>
+     <nav> Ucze się programować dla pieniędzy </nav>
+    <div class="container">
+        <div class="Jakub">
+            <img src="https://picsum.photos/id/256/200/200">
+            <h1>Jakub</h1>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus et tortor non ullamcorper. Pellentesque vehicula fringilla magna, quis tincidunt turpis vulputate non. Morbi efficitur enim ac efficitur vulputate.<br><a href="kopia1.html"><button>weź se kliknij</button></a></p>
+            
+        </div>
+        
+        <div class="Bartek">
+            <img src="https://picsum.photos/id/299/200/200">
+            <h1>Bartek</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus et tortor non ullamcorper. Pellentesque vehicula fringilla magna, quis tincidunt turpis vulputate non. Morbi efficitur enim ac efficitur vulputate.<br><a href="kopia2.html"><button>weź se kliknij</button></a></p>
+        </div>
+        <div class="Mateusz">
+            <img src="https://picsum.photos/id/200/200/200">
+            <h1>Mateusz</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus et tortor non ullamcorper. Pellentesque vehicula fringilla magna, quis tincidunt turpis vulputate non. Morbi efficitur enim ac efficitur vulputate.<br><a href="kopia3.html"><button>weź se kliknij</button></a></p>
+        </div>
+        <div class="Tomek">
+            <img src="https://picsum.photos/id/237/200/200">
+            <h1>Tomek</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus et tortor non ullamcorper. Pellentesque vehicula fringilla magna, quis tincidunt turpis vulputate non. Morbi efficitur enim ac efficitur vulputate.<br><a href="kopia4.html"><button>weź se kliknij</button></a></p>
+        </div>
+        <div class="Michał">
+            <img src="https://picsum.photos/id/230/200/200">
+            <h1>Michał</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus et tortor non ullamcorper. Pellentesque vehicula fringilla magna, quis tincidunt turpis vulputate non. Morbi efficitur enim ac efficitur vulputate.<br><a href="kopia5.html"><button>weź se kliknij</button></a></p>
+        </div>
+        </div>
+        <div class="main">
+            <h2>Czy na programowaniu da się zarobić?</h2><br>
+            Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scel Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque. Morbi eget ultrices augue. Ut bibendum tristique pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin laoreet odio sit amet vulputate lacinia. Maecenas neque nibh, mollis non magna a, porttitor ullamcorper risus. Praesent placerat, dui sit amet consectetur tempus, leo odio placerat nunc, non cursus lacus justo varius elit. Fusce pretium diam aliquet dictum fringilla. Vivamus imperdiet eros eget finibus iaculis. Sed eleifend odio sed nunc placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sollicitudin purus non urna finibus, sed vulputate sapien dignissim. Pellentesque ut aliquet nisl. Morbi vehicula interdum orci quis sagittis. Nam mollis lectus turpis, eget maximus est maximus et. Sed lacinia nulla ac metus porta, sed interdum ante scelerisque.erisque.
+        </div>
+        <section class="Tabela">
+            <section class="scroll">
+                <section class="Tabele">
+            <table class="Tabela1">
+                <tr>
+                    <th>Cos1</th>
+                    <th>Cos2</th>
+                    <th>Cos3</th>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+            </table>
+            <table class="Tabela2">
+                <tr>
+                    <th>Cos1</th>
+                    <th>Cos2</th>
+                    <th>Cos3</th>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+            </table>
+            <table class="Tabela1">
+                <tr>
+                    <th>Cos1</th>
+                    <th>Cos2</th>
+                    <th>Cos3</th>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+            </table>
+            <table class="Tabela2">
+                <tr>
+                    <th>Cos1</th>
+                    <th>Cos2</th>
+                    <th>Cos3</th>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+                <tr>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                    <td>noqigononoi</td>
+                </tr>
+            </table>
+            </section>
+        </section>
+        </section>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d824.8420007541449!2d18.94525640495226!3d49.97608858608798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716bae8e68c683f%3A0xe7ca649ca60dbdd!2sPZS%20Nr%201!5e0!3m2!1spl!2spl!4v1695109755345!5m2!1spl!2spl" width="1900
+            " height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<footer>
+    Copyright Bongo
+</footer>
+</body> 
+</html>
