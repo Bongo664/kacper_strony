@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var tablica1 = new Array();
+    var tablica2 = new Array();
+    var tablica3 = new Array();
+    var tablica4 = new Array();
+    function dodaj() {
+        var input = document.getElementById("num").value;
+        document.getElementById("num").value = "";
+        tablica1.push(Number(input));
+    }
+    function licz() {
+        var a = 0;
+        document.getElementById("wsz").innerText = "";
+        for (var i = 0; i < tablica1.length; i++) {
+            if (tablica1[i] % 2 == 0) {
+                tablica2.push(tablica1[i]);
+            } else {
+                tablica3.push(tablica1[i]);
+            }
+            a += tablica1[i];
+            const color = (tablica1[i] % 2 === 0) ? "green" : "red";
+            const span = document.createElement(`span`);
+            span.textContent = tablica1[i] + ",";
+            span.style.color = color;
+            const list = document.getElementById("wsz");
+            list.appendChild(span);
+        }
+        document.getElementById("sum").innerText = a;
+        var c = "";
+        for(var i=0;i<tablica2.length;i++) {
+            c=c + tablica2[i] + ", ";
+        }
+        document.getElementById("parz").innerText = c;
+        document.getElementById("nieparz").innerText = tablica3;
+        var pot = "";
+        for(var i=0;i<tablica1.length;i++) {
+            pot = pot + Math.pow(parseInt(tablica1[i]),3) + ",";
+        }
+        document.getElementById("pot3").innerText = pot;
+        for(i=0;i<=tablica1.length;i++){
+            
+        }
+    }
+</script>
+<body>
+    <input type="number" id="num" name="num" placeholder="daj" />
+    <button type="button" onclick="dodaj()">dodaj</button>
+    <button type="button" onclick="licz()">licz</button>
+    <div id="bot">
+        <div id="wsz"></div>
+        <div id="sum"></div>
+        <div id="parz"></div>
+        <div id="nieparz"></div>
+        <div id="pot3"></div>
+        <div id="tro"></div>
+    </div>
+</body>
+</html>
