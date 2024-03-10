@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="me">
+        <nav>
+            <ul>
+                <li>ile:<input type="number" id="ile"></li>
+                <li>a:<input type="number" id="liczbaA"></li>
+                <li>b:<input type="number" id="liczbaB"></li>
+                <li>R<input type="number" id="R"></li>
+                <li>G<input type="number" id="G"></li>
+                <li>B<input type="number" id="B"></li>
+                <li><button onclick="nie()">wyślij</button></li>
+            </ul>
+        </nav>
+    </div>
+    <h2 id="kola">liczba kółek</h2>
+    <section class="rysowanie">
+        <div class="mid" id="mid">
+            
+        </div>
+    </section>
+
+    <script>
+        function nie(){
+        var ile = document.getElementById("ile").value;
+        var a = document.getElementById("liczbaA").value;
+        var b = document.getElementById("liczbaB").value;
+        var Re = document.getElementById("R").value;
+        var Gr = document.getElementById("G").value;
+        var Bl = document.getElementById("B").value;
+            for(i=0;i<ile;i++){
+            var element = document.createElement("div");
+            element.style.width = a + "px";
+            element.style.height = b + "px";
+            element.style.backgroundColor = `rgb(${Re}, ${Gr}, ${Bl})`; 
+            element.textContent = i;
+            element.style.margin = "5px";
+            if(i % 7 == 0) {
+                element.style.borderRadius = "100%"
+            }
+            Re++;
+            Gr++;
+            Bl++;
+            document.getElementById("mid").appendChild(element);
+
+        }
+            var circleCount = document.querySelectorAll("#mid div[style*='border-radius: 100%;']").length;
+            document.getElementById("kola").textContent = "Liczba kołek: " + circleCount;
+
+}
+</script>
+</body>
+</html>

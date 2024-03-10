@@ -1,0 +1,38 @@
+body, html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+}
+li{
+    list-style: none;
+    margin-top:1.7%
+}
+nav{
+    width: 100vw;
+    height: 10vh;
+    background-color: grey;
+}
+input{
+    width: 20%;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    margin:0;
+}
+.mid{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+}
+.rysowanie{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
