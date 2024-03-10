@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Szyfr Cezara</title>
+</head>
+<body>
+  <h1>Szyfr Cezara</h1>
+  <p>Wpisz tekst do zaszyfrowania (przesunięcie = 8):</p>
+  <form onsubmit="return szyfruj()">
+    <label for="tekst">Tekst:</label>
+    <br>
+    <textarea id="tekst" name="tekst" rows="5" cols="50"></textarea>
+    <br>
+    <br>
+    <input type="submit" value="Szyfruj">
+  </form>
+  <br>
+  <p id="wynik"></p>
+
+  <script>
+function szyfrujCezar(tekst, przesuniecie) {
+  var alfabet = "aąbcćdeęfghijklłmnńoóprsśtuwyzźż";
+  var szyfr = alfabet.slice(przesuniecie) + alfabet.slice(0, przesuniecie);
+  var wynik = "";
+
+  for (var znak of tekst) {
+    var pozycja = alfabet.indexOf(znak.toLowerCase());
+    if (pozycja === -1) {
+      wynik += znak;
+    } else {
+      wynik += szyfr[pozycja];
+    }
+  }
+
+  return wynik;
+}
+
+function szyfruj() {
+  var tekst = document.getElementById("tekst").value;
+  var przesuniecie = 8; // Domyślne przesunięcie
+  var zaszyfrowanyTekst = szyfrujCezar(tekst, przesuniecie);
+  document.getElementById("wynik").innerHTML = zaszyfrowanyTekst;
+  return false;
+}
+
+
+  </script>
+</body>
+</html>
