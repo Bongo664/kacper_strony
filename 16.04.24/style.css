@@ -1,0 +1,96 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.lewo{
+    width: 25%;
+    background-color: #E1BEE7;
+    height: 95.85vh;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+h2{
+    margin: 0;
+    text-align: center;
+}
+.lewo-gora{
+    height: 400px;
+    width: 100%;
+    padding-top: 5%;
+}
+
+ul{
+    list-style:circle;
+    padding-left: 15%;
+}
+.str{
+    margin-left: 5%;
+}
+.lewo-dol{
+    height: 330px;
+}
+.zdj-dol{
+    display: flex;
+    padding: 4px;
+    margin:15px;
+    margin-top: 25%;
+}
+footer{
+    background-color:#9C64A6;
+    color: white;
+    padding: 10px;
+}
+.prawo{
+    width: 75%;
+    height: 95.85vh;
+    font-size: 170%;
+}
+section{
+    display: flex;
+}
+header{
+    background-color: #9C64A6;
+    text-align: center;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    margin: 0;
+    color: white;
+}
+p{
+    color:#9C64A6;
+    text-align: center;
+}
+.prawo-zdj{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+.tel{
+    color:#9C64A6;
+}
+.zdj-z-prawa:hover{
+    border: 1px dashed black;
+    padding: 3px;
+}
+h3{
+    text-align: center;
+    color: #9C64A6;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
