@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+main{
+    display: flex;   
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(187, 185, 185);
+    margin-bottom: 80px;
+}
+
+nav{
+    margin-right: 820px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 10px;
+}
+
+nav ul li{
+    margin: 0 10px;
+    color: rgb(109, 109, 109);
+}
+
+.sneakers{
+    height: 20px;
+    padding-top: 7px;
+}
+
+.cart{
+    height: 23px;
+    padding-top: 8px;
+}
+
+.avatar{
+    height: 40px;
+    margin-left: 50px;
+}
+
+.section{
+    display: flex;
+    width: 1440px;
+    margin-left: 17%;
+    margin-right: auto;
+}
+
+.left{
+    width: 50%;
+}
+.dafs:hover{
+    opacity: 0.5;
+    border: 2px hsl(26, 100%, 55%) solid;
+    width: 98px;
+    height: 98px;
+    cursor: pointer;
+}
+.right{
+    width: 30%;
+    margin-top: 8%;
+    height: 50%;
+}
+
+.left img{
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
+.right h1{
+    font-size: 40px;
+    
+}
+
+.io{
+    color: hsl(26, 100%, 55%);
+}
+.prz{
+    margin: 0;
+}
+
+.cena{
+    padding-top: 0px;
+    font-size: 25px;
+    padding-bottom: 30px;
+    margin-top: -8.5%;
+    margin-right: 5%;
+}
+
+.cenapz{
+    text-decoration: line-through;
+    margin-top: -5%;
+    color: hsl(220, 14%, 75%);
+}
+
+.dwieceny{
+    display: flex;
+}
+
+span{
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%); 
+    height: 20px;
+    width: 32px;
+    border-radius: 5px;
+}
+
+.info{
+    margin-bottom: 0px;
+}
+
+
+.left-bottom{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+}
+
+.left-bottom img{
+    width: 100px;
+    height: 100px;
+}
+
+.pojzdj{
+    width: 80%;
+}
+.tak{
+    color: hsl(219, 9%, 45%);
+}
+.btn{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.in{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bl{
+    width: 35%;
+    background-color: hsl(223, 64%, 98%);
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bl2{
+    width: 55%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: hsl(26, 100%, 55%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dsa{
+    margin-top: 15%;
+    margin-left: 25%;
+}
+.nie{
+    width: 20%;
+    height: 30px;
+}
+.hgdr{
+    width: 60%;
+    height: 30px;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+.us{
+    margin-top: 35%;
+    margin-left: 5%;
+}
+.qwewq{
+    width: 10%;
+}
+.dwq{
+    margin-right: 5%;
+}
+.add{
+    color: white;
+    margin-top: -18%;
+}
+button{
+    border: 0;
+    background-color: hsl(223, 64%, 98%);
+    cursor: pointer;
+}
+.us{
+    margin-top: 70%;
+}
+.po{
+    border: 0;
+    background-color: hsl(26, 100%, 55%);
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+}
+
+@media screen and (max-width: 1440px){
+    body,html{
+        width: 1440px;
+    }
+    nav{
+        margin-right: 40%;
+    }
+    main{
+        width: 90%;
+        margin-left: 8%;
+    }
+}
+@media screen and (max-width:375px){
+        body,html{
+            width: 375px;
+        }
+        .section{
+            display: block;
+            width: 375px;
+            margin-left: 0;
+        }
+        .dafs{
+            display: none;
+        }
+        .pojzdj{
+            width: 100%;
+        }
+        .pojzdj img{
+            width: 375px;
+            border-radius: 0;
+        }
+        .left{
+            width: 100%;
+        }
+        .right{
+            width: 95%;
+            margin-left: 2.5%;
+        }
+        ul li{
+            display: none;
+        }
+        nav{
+            width: 0;
+            margin-right: 25%;
+        }
+        main{
+            margin:0;
+            width: 100%;
+        }
+        .avatar{
+            margin-left: 2%;
+        }
+        .btn{
+            height: 70px;
+        }
+        .in{
+            display: block;
+        }
+        .bl{
+            width: 97.5%;
+        }
+        .bl2{
+            margin-top: 5%;
+            width: 97.5%;
+        }
+        .nie{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -4%;
+        }
+        .hgdr{
+            margin-bottom: 3%;
+        }
+    }
