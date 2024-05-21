@@ -1,0 +1,72 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+header{
+    background-color: #BA6B6C;
+    color: white;
+    padding: 7px;
+    width: 100vw;
+    text-align: center;
+}
+.lewo,.prawo{
+    background-color: #EF9A9A;
+    height: 500px;
+    width: 20%;
+    text-align: center;
+}
+.main{
+    display: flex;
+}
+.srodek{
+    background-color: MistyRose;
+    width: 60%;
+    height: 500px;
+    text-align: center;
+}
+.dane{
+    width: 100%;
+    background-color: mistyrose;
+    padding: 50px;
+    text-align: center;
+    margin-top: -40px;
+    margin-left: -50px;
+    height: 197px;
+}
+footer{
+    background-color: #BA6B6C;
+    color: white;
+    padding: 7px;
+    text-align: center;
+}
+.cze{
+    color: maroon;
+    font-size: 170%;
+}
+table{
+    border:1px solid Maroon;
+    margin:auto;
+    width: 80%;
+}
+.imgs{
+    width: 100%;
+    height: 86.7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 120px;
+    margin: 7px;
+    box-shadow: 7px 7px 7px dimgray;
+}
+li{
+    text-align: left;
+    list-style: upper-roman;
+    margin-top: 20px;
+}
+ol{
+    margin-left: 100px;
+    margin-top: 69px;
+}
