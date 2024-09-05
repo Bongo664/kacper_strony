@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    
+}
+header{
+    background-color: grey;
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+.logo{
+    height: 10vh;
+}
+.hprawo{
+    height: 8vh;
+    width: 10vw;
+    display: flex
+}
+.tak{
+    height: 8vh;
+    width: 90vw;
+}
+a{
+    margin-left: 15px;
+    background-color: dimgrey;
+    margin-top: 10%
+}
+.main{
+    height: 90vh;
+    background-color:darkgrey;
+    display: flex;
+}
+.mlewo{
+    height: 60vh;
+    width: 50vw;
+}
+.mprawo{
+    height: 60vh;
+    width: 50vw;
+}
+.t{
+    height: 40vh;
+    margin-left: 30%;
+    margin-top: 20%;   
+}
+.pa{
+    margin-left: 20%;
+    margin-top: 14%;
+}
+.aq{
+    width: 100%;
+    height: 13vh;
+}
