@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="liczba" placeholder="Wpisz liczbę">
+    <button onclick="sprawdzLiczbe()">Sprawdź liczbę</button>
+    <p id="wynik"></p>
+    <script>
+        function sprawdzLiczbe() {
+            let liczba = document.getElementById("liczba").value;
+            let wynik = document.getElementById("wynik");
+            if (liczba > 0) {
+                wynik.textContent = "Liczba jest dodatnia.";
+            } else if (liczba < 0) {
+                wynik.textContent = "Liczba jest ujemna.";
+            } else {
+                wynik.textContent = "Liczba jest równa zero.";
+            }
+        }
+    </script>
+</body>
+</html>
