@@ -20,6 +20,13 @@
     <button onclick="srocen()">przyjęcie obiektu reprezentującego ucznia (imie, oceny) i zwrace średnią ocen tego ucznia</button>
     <h1>zadanie 7</h1>
     <button onclick="tabusu()">usuwa wszystkie wystąpienia danej liczby z tablicy</button>
+    <h1>zadanie 8</h1>
+    <button onclick="ksiazki()"> wyświetla książki po roku 2000</button>
+    <h1>zadanie 9</h1>
+    <button onclick="daneos()">przyjmuje obiekt zawierający dane osobowe i zwraca pełne imię i nazwisko</button>
+    <h1>zadanie 10</h1>
+    <button onclick="iter()"> iteruje po tablicy zawierającej różne typy danych (liczby, łańcuchy znaków,
+        boolean) i wyświetla tylko liczby</button>
 </body>
 <script>
     function parz(){
@@ -83,6 +90,56 @@
         }
         alert("Tablica po usunięciu liczby " + liczba + ": " + tablica);
     }
+    function ksiazki(){
+        var ksiazki = [
+            {
+                tytul: "Pierwsza książka",
+                autor: "Autor1",
+                rokWydania: 1995
+            },
+            {
+                tytul: "Druga książka",
+                autor: "Autor2",
+                rokWydania: 1999
+            },
+            {
+                tytul: "Trzecia książka",
+                autor: "Autor3",
+                rokWydania: 2001
+            },
+            {
+                tytul: "Czwarta książka",
+                autor: "Autor4",
+                rokWydania: 2020
+            },
+            {
+                tytul: "Piąta książka",
+                autor: "Autor5",
+                rokWydania: 2000
+            }
+        ];
+        for(var i=0; i<ksiazki.length; i++){
+            if(ksiazki[i].rokWydania >= 2000){
+                console.log(ksiazki[i].tytul);
+            }
+        }
+        }
+        function daneos(){
+            var osoba = {
+                imie: "Jan",
+                nazwisko: "Kowalski",
+                wiek: 25
+            };
+            alert("Imię: " + osoba.imie + "\nNazwisko: " + osoba.nazwisko + "\nWiek: " + osoba.wiek);
+        }
+        function iter(){
+            var tablica = [1, "abc", true, 3.14, "def"];
+            for(var i=0; i<tablica.length; i++){
+                if(typeof tablica[i] === "number"){
+                    console.log(tablica[i]);
+                }
+            }
+        }
 
 
 </script>
