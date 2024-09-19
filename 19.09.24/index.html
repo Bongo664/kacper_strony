@@ -18,6 +18,8 @@
     <button onclick="najwar()">przyjmuje tablicę liczb i zwraca największą wartość w tej tablicy</button>
     <h1>zadanie 6</h1>
     <button onclick="srocen()">przyjęcie obiektu reprezentującego ucznia (imie, oceny) i zwrace średnią ocen tego ucznia</button>
+    <h1>zadanie 7</h1>
+    <button onclick="tabusu()">usuwa wszystkie wystąpienia danej liczby z tablicy</button>
 </body>
 <script>
     function parz(){
@@ -69,6 +71,17 @@
         }
         var srednia = suma / uczen.oceny.length;
         alert("srednia ocen ucznia " + uczen.imie + " wynosi: " + srednia);
+    }
+    function tabusu(){
+        var tablica = [1, 2, 3, 2, 4, 5, 2, 3, 6];
+        var liczba = 2;
+        for(var i=0; i<tablica.length; i++){
+            if(tablica[i] == liczba){
+                tablica.splice(i, 1);
+                i--;
+            }
+        }
+        alert("Tablica po usunięciu liczby " + liczba + ": " + tablica);
     }
 
 
