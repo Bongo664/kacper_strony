@@ -6,19 +6,90 @@
     <title>Document</title>
 </head>
 <body>
+    <h1></h1>
+    <h1 id="naglowek">Witaj w HTML!</h1>
+    <div id="staryElement">adbnaidfnhadnadnaidnakfnafnanddnakdbn</div>
+    <div class="zadanie6">zadanie6</div>
+    <img src="https://picsum.photos/id/237/200/300" id="obrazek">
+    <ul>
+        <li>dasd</li>
+    </ul>
+    <h3>zadanie 5</h3>
     <script>
-        console.log("zadanie 1")
-    let numbers = [];
+    console.log("zadanie 1")
+    let numery = [];
     for (let i = 1; i <= 10; i++) {
-     numbers.push(i);
+     numery.push(i);
     }
 
     console.log("większe od 5");
-    for (let num of numbers) {
+    for (let num of numery) {
       if (num > 5) {
         console.log(num);
       }
     }
+    console.log("zadanie 2");
+    var liczby = [1, 4, 3, 10, 16, 2];
+        var najwieksza = liczby[0];
+        for(var i=1; i<liczby.length; i++){
+            if(liczby[i] > najwieksza){
+                najwieksza = liczby[i];
+            }
+        }
+        console.log("Największą wartość w tablicy to: " + najwieksza);
+    console.log("zadanie 3");
+    function zadanie3(){
+        let uczen = {
+            imie: "Jakub",
+            wiek: 16,
+            oceny: [4,6,5,3]
+        }
+        var srednia = 0
+        var wynik = 0
+        for(i=0; i<uczen.oceny.length;i++){
+            wynik += uczen.oceny[i]
+        }
+        srednia = wynik / uczen.oceny.length
+
+        console.log("średnia ocen = " , srednia)
+    }
+    zadanie3()
+
+
+
+    console.log("zadanie 4");
+    let elementId = document.getElementById('naglowek');
+    elementId.innerText = "Witaj w JavaScript!";
+
+    console.log("zadanie 5");
+    let nowyElement = document.createElement('div');
+    nowyElement.textContent = "To jest nowy blok";
+    document.body.appendChild(nowyElement);
+
+    console.log("zadanie 6");
+    let zadanie6 = document.getElementsByClassName("zadanie6")
+    for(i=0; i<zadanie6.length; i++){
+        zadanie6[i].style.color = "red";
+    }
+
+    console.log("zadanie 7");
+    let elementDoUsuniecia = document.getElementById('staryElement');
+    elementDoUsuniecia.remove();
+
+    console.log("zadanie 8");
+    let nowyElementa = document.createElement('button');
+    nowyElementa.textContent = "Kliknij mnie";
+    document.body.appendChild(nowyElementa);
+
+    console.log("zadanie 9");
+    let obrazek = document.getElementById('obrazek');
+    obrazek.src = "https://picsum.photos/seed/picsum/200/300";
+
+    console.log("zadanie 10");
+    let lis = document.querySelectorAll('li');
+        for(let li of lis){
+            li.setAttribute('class', 'aktywny');
+}
     </script>
 </body>
 </html>
