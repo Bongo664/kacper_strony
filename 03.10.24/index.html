@@ -11,6 +11,7 @@
     </style>
 </head>
 <body>
+    <h1 id="header"></h1>
     <div id="naglowek"></div>
     <button onclick="zadanie4()" id="button">Naciśnij mnie</button>
     <input type="text" id="poleTekstowe" placeholder="Wpisz tekst..." oninput="zadanie5()">
@@ -20,6 +21,8 @@
         <button type="submit" onclick="zadanie6()">Prześlij</button>
     </form>
     <button id="przycisk" onclick="zadanie7()">asdasd</button>
+    <button id="buttonz6">Przyciks</button>
+    <input type="text" id="myInput" oninput="zadanie10(this)">
 
     <script>
         function zadanie1(){
@@ -66,8 +69,29 @@ function zadanie6(){
         event.clientY);
 });
     }
-    function zadanie9(){
+        //zadanie8:
+		 let klikniecia = 0;
+    const button = document.getElementById('buttonz6');
 
+    button.addEventListener('click', function() {
+        klikniecia++;
+    if (klikniecia === 3) {
+        button.removeEventListener('click', this);
+        console.log('Zdarzenie usunięte');
+    }
+    });
+    function zadanie9(){
+        document.addEventListener('click', function() {
+        document.querySelector('h1').textContent = 'Kliknięto na stronie!';
+        });
+    }
+    zadanie9();
+    function zadanie10(input){
+        if (input.value.length > 10) {
+            input.style.color = 'green';
+        } else {
+            input.style.color = 'black';
+        }
     }
 
     </script>
