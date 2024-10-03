@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="naglowek"></div>
+    <button onclick="zadanie4()" id="button">Naciśnij mnie</button>
+    <input type="text" id="poleTekstowe" placeholder="Wpisz tekst..." oninput="zadanie5()">
+    <div class="item">Element 1</div>
+    <form action="" id="formularz">
+        <input type="text" required>
+        <button type="submit" onclick="zadanie6()">Prześlij</button>
+    </form>
+    <button id="przycisk" onclick="zadanie7()">asdasd</button>
+
+    <script>
+        function zadanie1(){
+        let nowyElement = document.createElement('div');
+        nowyElement.textContent = "Nowy element";
+        document.body.appendChild(nowyElement);
+        }
+        zadanie1();
+        function zadanie2(){
+       document.getElementById("naglowek").textContent = "Witaj na stronie!" 
+    }
+    zadanie2()
+
+    function zadanie3(){
+        let item = document.getElementsByClassName("item")
+        for(i=0; i<item.length; i++){
+        item[i].style.color = "blue";
+    }
+    }
+    zadanie3()
+    
+    function zadanie4(){
+        document.getElementById("button").style.background = "red"
+    }
+    function zadanie5(){
+        let poleTekstowe = document.getElementById('poleTekstowe');
+        poleTekstowe.addEventListener('input', function() {
+        console.log('Wprowadzono tekst:', poleTekstowe.value);
+    });
+    }
+    
+function zadanie6(){
+    let formularz = document.getElementById('formularz');
+    formularz.addEventListener('submit', function(event) {
+    event.preventDefault();
+    });
+    console.log('Formularz został przesłany!')
+
+    }
+    function zadanie7(){
+        let przycisk = document.getElementById('przycisk');
+        przycisk.addEventListener('click', function(event) {
+        console.log('Kliknięto przycisk na pozycji X:', event.clientX, 'Y:',
+        event.clientY);
+});
+    }
+    function zadanie9(){
+
+    }
+
+    </script>
+    
+</body>
+</html>
