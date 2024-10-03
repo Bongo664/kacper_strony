@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>zadanie 1</h1>
+    <button onclick="parz()">Sprawdź liczbę</button>
+    <h1>zadanie 2</h1>
+    <button onclick="obw()">Obwód prostokąta</button>
+    <h1>zadanie 3</h1>
+    <button onclick="sum()">Suma liczb od 1 do 100</button>
+    <h1>zadanie 4</h1>
+    <button onclick="tab()">tablica zawierająca pierwsze 10 liczb parzystych</button>
+    <h1>zadanie 5</h1>
+    <button onclick="najwar()">przyjmuje tablicę liczb i zwraca największą wartość w tej tablicy</button>
+    <h1>zadanie 6</h1>
+    <button onclick="srocen()">przyjęcie obiektu reprezentującego ucznia (imie, oceny) i zwrace średnią ocen tego ucznia</button>
+    <h1>zadanie 7</h1>
+    <button onclick="tabusu()">usuwa wszystkie wystąpienia danej liczby z tablicy</button>
+    <h1>zadanie 8</h1>
+    <button onclick="ksiazki()"> wyświetla książki po roku 2000</button>
+    <h1>zadanie 9</h1>
+    <button onclick="daneos()">przyjmuje obiekt zawierający dane osobowe i zwraca pełne imię i nazwisko</button>
+    <h1>zadanie 10</h1>
+    <button onclick="iter()"> iteruje po tablicy zawierającej różne typy danych (liczby, łańcuchy znaków,
+        boolean) i wyświetla tylko liczby</button>
+</body>
+<script>
+    function parz(){
+        var liczba = 7;
+        if(liczba.value % 2 == 0){
+            alert("Liczba jest parzysta");
+        } else {
+            alert("Liczba jest nieparzysta");
+        }
+    }
+    function obw(){
+        var dlu = 3;
+        var sze = 5;
+        var wynik = dlu * sze;
+        alert("Obwód prostokąta wynosi: " + wynik);
+    }
+    function sum(){
+        var suma = 0;
+        for(var i=1; i<=100; i++){
+            suma += i;
+        }
+        alert("Suma liczb od 1 do 100 wynosi: " + suma);
+    }
+    function tab(){
+        var tablica = [];
+        for(var i=0; i<10; i++){
+            tablica[i] = 2 * (i+1);
+        }
+        alert("Tablica zawierająca pierwsze 10 liczb parzystych: " + tablica);
+    }
+    function najwar(){
+        var tablica = [1, 4, 7, 9,128,23,86,12,90];
+        var najwieksza = tablica[0];
+        for(var i=1; i<tablica.length; i++){
+            if(tablica[i] > najwieksza){
+                najwieksza = tablica[i];
+            }
+        }
+        alert("Największą wartość w tablicy to: " + najwieksza);
+    }
+    function srocen(){
+        var uczen = {
+            imie: "Jan",
+            oceny: [3, 5, 4, 5, 5]
+        };
+        var suma = 0;
+        for(var i=0; i<uczen.oceny.length; i++){
+            suma += uczen.oceny[i];
+        }
+        var srednia = suma / uczen.oceny.length;
+        alert("srednia ocen ucznia " + uczen.imie + " wynosi: " + srednia);
+    }
+    function tabusu(){
+        var tablica = [1, 2, 3, 2, 4, 5, 2, 3, 6];
+        var liczba = 2;
+        for(var i=0; i<tablica.length; i++){
+            if(tablica[i] == liczba){
+                tablica.splice(i, 1);
+                i--;
+            }
+        }
+        alert("Tablica po usunięciu liczby " + liczba + ": " + tablica);
+    }
+    function ksiazki(){
+        var ksiazki = [
+            {
+                tytul: "Pierwsza książka",
+                autor: "Autor1",
+                rokWydania: 1995
+            },
+            {
+                tytul: "Druga książka",
+                autor: "Autor2",
+                rokWydania: 1999
+            },
+            {
+                tytul: "Trzecia książka",
+                autor: "Autor3",
+                rokWydania: 2001
+            },
+            {
+                tytul: "Czwarta książka",
+                autor: "Autor4",
+                rokWydania: 2020
+            },
+            {
+                tytul: "Piąta książka",
+                autor: "Autor5",
+                rokWydania: 2000
+            }
+        ];
+        for(var i=0; i<ksiazki.length; i++){
+            if(ksiazki[i].rokWydania >= 2000){
+                console.log(ksiazki[i].tytul);
+            }
+        }
+        }
+        function daneos(){
+            var osoba = {
+                imie: "Jan",
+                nazwisko: "Kowalski",
+                wiek: 25
+            };
+            alert("Imię: " + osoba.imie + "\nNazwisko: " + osoba.nazwisko + "\nWiek: " + osoba.wiek);
+        }
+        function iter(){
+            var tablica = [1, "abc", true, 3.14, "def"];
+            for(var i=0; i<tablica.length; i++){
+                if(typeof tablica[i] === "number"){
+                    console.log(tablica[i]);
+                }
+            }
+        }
+
+
+</script>
+</html>
