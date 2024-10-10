@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>zadanie7: Napisz skrypt, który sprawdza, czy dwa pola „Hasło” i „Potwierdzenie hasła” w formularzu mają tę samą
+wartość. Jeśli nie, wyświetl komunikat o błędzie.</h1>
+    <button id="przycisk">przycisk</button>
+    <form id="formularzz2">
+        <button id="a">Wyslij</button>
+    </form>
+    <input type="text" id="tekst" placeholder="Wpisz tekst">
+    <form id="formularz">
+        <input type="text" id="teks" placeholder="imie">
+        <button type="submit" onclick="zadanie4()">Wyślij</button>
+    </form>
+        <form id="formularzz5">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="haslo">Hasło:</label>
+        <input type="password" id="haslo" name="haslo">
+        <button type="submit">Zaloguj się</button>
+       </form>
+    <form>
+    <input type="text" id="tekst2" placeholder="Wpisz wiek">
+    <button type="button" onclick="zadanie6()">Sprawdź wiek</button>
+    </form>
+    <form>
+    <input type="password" id="haslo" placeholder="haslo">
+    <input type="password" id="potwierdzenieHasla" >
+    </form>
+    <script>
+function zadanie1(){
+    document.addEventListener('click', function(event) {
+    console.log('Kliknięto na pozycji X:', event.clientX, 'Y:',
+    event.clientY);
+    });
+}
+zadanie1()
+function zadanie2(){
+    let formularz = document.getElementById('formularzz2');
+formularz.addEventListener('mouseover', function(event) {
+event.preventDefault();
+let przycisk = document.getElementById('a').style.color = "blue";
+});
+
+formularz.addEventListener('mouseout', function(event) {
+event.preventDefault();
+let przycisk = document.getElementById('a').style.color = "red";
+});
+}
+       zadanie2()
+function zadanie3(){
+    var input = document.getElementById("tekst");
+    input.addEventListener("dblclick", function(){
+        input.value += " Domyślna wartość";
+    });
+}
+zadanie3();
+function zadanie4(){
+    var formularz = document.getElementById("formularz");
+    formularz.addEventListener("submit", function(event){
+        event.preventDefault();
+        var imie = document.getElementById("teks").value;
+        if(imie === ""){
+            alert("Pole imię nie może być puste");
+        } else {
+            alert("Witaj " + imie);
+        }
+    });
+}
+function zadanie5(){
+        let formularz = document.getElementById('formularzz5');
+        formularz.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let email = document.getElementById('email').value;
+        let haslo = document.getElementById('haslo').value;
+
+        if (haslo === "" || !/\d/.test(haslo) && haslo.length < 8) {
+        alert('Proszę wprowadzić poprawny adres e-mail.');
+        } else {
+        console.log('Dane są poprawne, przesyłanie formularza...');
+        }
+        });
+       }
+       zadanie5()
+function zadanie6(){
+    var wiek = document.getElementById("tekst2").value;
+    if(isNaN(wiek) || wiek < 18 || wiek > 100){
+        alert("Wpisano błędne dane. Wpisz wiek w przedziale od 18 do 100");
+    } else {
+        alert("Wiek poprawny");
+    }
+    if(wiek === ""){
+        alert("Pole wiek nie może być puste");
+    } else {
+        alert("Twoj wiek to: " + wiek);
+    }
+}
+function zadanie7(){
+    let haslo = document.getElementById('haslo').value;
+    let potwierdzenieHasla = document.getElementById('potwierdzenieHasla').value;
+    if(haslo === potwierdzenieHasla){
+        console.log("Hasła są identyczne");
+    } else {
+        console.log("Hasła nie są identyczne");
+     }
+}
+
+    </script>
+    
+</body>
+</html>
