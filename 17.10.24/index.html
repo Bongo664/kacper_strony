@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Rejestracyjny</title>
+    <style>
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        .valid {
+            border: 2px solid green;
+        }
+        .invalid {
+            border: 2px solid red;
+        }
+        #podsumowanie {
+            display: none;
+            margin-top: 20px;
+        }
+        .formu{
+            background-color: azure;
+            width: 30%;
+            margin: 0 auto;
+        }
+        #formularz{
+            border-radius: 1.5vh;
+            box-shadow: 2px 2px 2px black;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            max-width: 500px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .data{
+            width:94.5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="formu">
+        <form id="formularz">
+            <input type="text" id="imie" name="imie" placeholder="Imię" required>
+            <input type="text" id="nazwisko" name="nazwisko" placeholder="Nazwisko" required>
+            <input type="date" id="urodzenia" name="urodzenia" required class="data">
+            <input type="email" id="email" name="email" placeholder="Adres e-mail" required>
+            <input type="tel" id="telefon" name="telefon" placeholder="Numer telefonu" maxlength="9" minlength="9" required>
+            <input type="password" id="haslo" name="haslo" placeholder="Hasło" required>
+            <input type="password" id="potw" name="potw" placeholder="Potwierdzenie hasła" required>
+            <input type="submit" value="Rejestruj">
+        </form>
+        <div id="podsumowanie"></div>
+    </div>
+
+    <script>
+        function validateInput(input) {
+            let isValid = true;
+            const id = input.id;
+
+            if (id === "imie" || id === "nazwisko") {
+                if (input.value.trim() === "") {
+                    input.classList.add("invalid");
+                    isValid = false;
+                } else {
+                    input.classList.remove("invalid");
+                    input.classList.add("valid");
+                }
+            }
+
+            if (id === "urodzenia") {
+                if (!/^\d{4}-\d{2}-\d{2}$/.test(input.value)) {
+                    input.classList.add("invalid");
+                    isValid = false;
+                } else {
+                    input.classList.remove("invalid");
+                    input.classList.add("valid");
+                }
+            }
+
+            if (id === "email") {
+                if (input.value === "" || !input.value.includes('@') || !input.value.includes('.')) {
+                    input.classList.add("invalid");
+                    isValid = false;
+                } else {
+                    input.classList.remove("invalid");
+                    input.classList.add("valid");
+                }
+            }
+
+            if (id === "telefon") {
+                if (!/^\d{9}$/.test(input.value)) {
+                    input.classList.add("invalid");
+                    isValid = false;
+                } else {
+                    input.classList.remove("invalid");
+                    input.classList.add("valid");
+                }
+            }
+
+            if (id === "haslo") {
+                if (input.value.length < 8 || !/\d/.test(input.value)) {
+                    input.classList.add("invalid");
+                    isValid = false;
+                } else {
+                    input.classList.remove("invalid");
+                    input.classList.add("valid");
+                }
+            }
+
+            if (id === "potw") {
+                const haslo = document.getElementById("haslo").value;
+                if (input.value !== haslo) {
+                    input.classList.add("invalid");
+                    isValid = false;
+                } else {
+                    input.classList.remove("invalid");
+                    input.classList.add("valid");
+                }
+            }
+
+            return isValid;
+        }
+
+        const form = document.getElementById("formularz");
+
+        Array.from(form.elements).forEach(input => {
+            if (input.tagName === "INPUT") {
+                input.addEventListener("input", function() {
+                    validateInput(input);
+                });
+            }
+        });
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let isValid = true;
+            Array.from(form.elements).forEach(input => {
+                if (input.tagName === "INPUT") {
+                    isValid = validateInput(input) && isValid;
+                }
+            });
+
+            if (isValid) {
+                form.style.display = 'none';
+                const podsumowanie = document.getElementById("podsumowanie");
+                podsumowanie.innerHTML = `
+                    <h2>Podsumowanie</h2>
+                    <p><strong>Imię:</strong> ${document.getElementById("imie").value}</p>
+                    <p><strong>Nazwisko:</strong> ${document.getElementById("nazwisko").value}</p>
+                    <p><strong>Data urodzenia:</strong> ${document.getElementById("urodzenia").value}</p>
+                    <p><strong>Adres e-mail:</strong> ${document.getElementById("email").value}</p>
+                    <p><strong>Numer telefonu:</strong> ${document.getElementById("telefon").value}</p>
+                `;
+                podsumowanie.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
