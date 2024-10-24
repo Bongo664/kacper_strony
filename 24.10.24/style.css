@@ -1,0 +1,71 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  background-color:aliceblue;
+  height:97vh;
+  width: 1440px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.mid{
+    width:70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.left{
+    width:50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+    height:45vh;
+}
+.right{
+    width:50%;
+    background-color: hsl(202, 55%, 16%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    height:45vh;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h4{
+    margin-right:40px;
+}
+.naz{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.mortage-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.in{
+    margin-bottom: 10px;
+}
