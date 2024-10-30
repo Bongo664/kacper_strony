@@ -126,8 +126,8 @@ const calculateMortgage = (
     totalInterest = totalPayment - mortgageAmount;
   }
 
-  monthlyRepayment.textContent = `zł ${addCommas(monthlyPayment.toFixed(2))}`;
-  totalRepayment.textContent = `zł ${addCommas(totalPayment.toFixed(2))}`;
+  monthlyRepayment.textContent = `£ ${addCommas(monthlyPayment.toFixed(2))}`;
+  totalRepayment.textContent = `£ ${addCommas(totalPayment.toFixed(2))}`;
   showResults.style.display = "block";
   hideResultsPage.style.display = "none";
 };
