@@ -1,0 +1,255 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .styl-tekstowy {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="tytul">Witaj na stronie!</h1>
+    <header id="naglowek">To jest nagłówek strony</header>
+    <p>To jest pierwszy paragraf na stronie.</p>
+    <div>To jest pierwszy div</div>
+    <div>To jest drugi div</div>
+    <h1>Lista elementów</h1>
+    <ul id="lista">
+      <li>Element 1</li>
+      <li>Element 2</li>
+      <li>Element 3</li>
+    </ul>
+    <button id="clickMe">pdiasldh</button>
+    <button id="przycisk1">Przycisk 1</button>
+    <button id="przycisk2">Przycisk 2</button>
+    <button id="przycisk3">Przycisk 3</button>
+    <form id="formularz">
+      <label for="nazwa">Nazwa:</label>
+      <input type="text" id="nazwa" required />
+      <label for="wiek">Wiek:</label>
+      <input type="number" id="wiek" min="18" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+      <button type="submit" id="przeslij">Prześlij</button>
+    </form>
+    <script>
+      function zadanie1() {
+        console.log("zadanie1");
+        console.log("Witaj na mojej stronie!");
+      }
+      zadanie1();
+
+      function zadanie2i3() {
+        console.log("zadanie2 i 3");
+        let imie = "Jan";
+        let wiek = 25;
+        console.log("Imię: " + imie + ", Wiek: " + wiek);
+      }
+      zadanie2i3();
+
+      function zadanie4() {
+        console.log("zadanie4");
+        let liczba = 10;
+        liczba += 2;
+        console.log("Po dodaniu: " + liczba);
+        liczba -= 2;
+        console.log("Po odjęciu: " + liczba);
+        liczba *= 2;
+        console.log("Po mnożeniu: " + liczba);
+        liczba /= 2;
+        console.log("Po dzieleniu: " + liczba);
+      }
+      zadanie4();
+
+      function zadanie5() {
+        console.log("zadanie5");
+        let x = 5;
+        let y = "5";
+        console.log(x == y);
+        console.log(x === y);
+      }
+      zadanie5();
+
+      function zadanie6() {
+        console.log("zadanie6");
+        let a = true;
+        let b = false;
+        console.log(a != b);
+        console.log(a || b);
+      }
+      zadanie6();
+
+      function zadanie8() {
+        console.log("zadanie8");
+        let owoce = ["jabłko", "banan", "pomarańcza"];
+        owoce.push("gruszka");
+        owoce.shift();
+        console.log(owoce);
+      }
+      zadanie8();
+
+      function zadanie9() {
+        console.log("zadanie9");
+        let liczby = [1, 2, 3];
+        liczby.push(4);
+        liczby.pop();
+        console.log("Po push i pop:", liczby);
+        let podwojone = liczby.map((x) => x * 2);
+        console.log("Podwojone liczby:", podwojone);
+        let wiekszeOd5 = liczby.filter((x) => x > 5);
+        console.log("Liczby większe od 5:", wiekszeOd5);
+        let suma = liczby.reduce((acc, curr) => acc + curr, 0);
+        console.log("Suma liczb:", suma);
+      }
+      zadanie9();
+
+      function zadanie10() {
+        console.log("zadanie10");
+        let samochod = {
+          marka: "Toyota",
+          model: "Corolla",
+          rok: 2020,
+          opis() {
+            return `Marka: ${this.marka}, Model: ${this.model}, Rok: ${this.rok}`;
+          },
+        };
+        console.log(samochod.opis());
+      }
+      zadanie10();
+
+      function zadanie11() {
+        console.log("zadanie11");
+        document.getElementById("tytul").innerText = "Witaj na stronie!";
+      }
+      zadanie11();
+
+      function zadanie12() {
+        console.log("zadanie12");
+        let naglowek = document.getElementById("naglowek");
+        let pierwszyP = document.querySelector("p");
+        let wszystkieDivy = document.querySelectorAll("div");
+        console.log(naglowek, pierwszyP, wszystkieDivy);
+      }
+      zadanie12();
+
+      function zadanie13() {
+        console.log("zadanie13");
+        let lista = document.getElementById("lista");
+        if (lista.lastElementChild) {
+          lista.removeChild(lista.lastElementChild);
+        } else {
+          console.log("Lista jest pusta!");
+        }
+        let nowyElement = document.createElement("li");
+        nowyElement.innerText = "Nowy element";
+        lista.appendChild(nowyElement);
+      }
+      zadanie13();
+
+      function zadanie14() {
+        console.log("zadanie14");
+        document.querySelector("div").innerHTML = "Cześć!";
+        let elementP = document.querySelector("p");
+        elementP.classList.add("styl-tekstowy");
+        elementP.style.color = "blue";
+      }
+      zadanie14();
+
+      function zadanie15() {
+        console.log("zadanie15");
+        let przycisk = document.getElementById("clickMe");
+        przycisk.addEventListener("click", function () {
+          console.log("Kliknięto przycisk!");
+        });
+      }
+      zadanie15();
+
+      function zadanie16() {
+        console.log("zadanie16");
+        let elementP = document.querySelector("p");
+        elementP.addEventListener("mouseover", function () {
+          elementP.style.color = "green";
+        });
+        elementP.addEventListener("mouseout", function () {
+          elementP.style.color = "";
+        });
+      }
+      zadanie16();
+
+      function zadanie17() {
+        console.log("zadanie17");
+        function wyswietlLiczbe(liczba) {
+          console.log("Wybrana liczba:", liczba);
+        }
+        document
+          .getElementById("przycisk1")
+          .addEventListener("click", () => wyswietlLiczbe(1));
+        document
+          .getElementById("przycisk2")
+          .addEventListener("click", () => wyswietlLiczbe(2));
+        document
+          .getElementById("przycisk3")
+          .addEventListener("click", () => wyswietlLiczbe(3));
+      }
+      zadanie17();
+      function zadanie18() {
+        console.log("zadanie18");
+        document
+          .getElementById("formularz")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            console.log("Formularz nie został przesłany");
+          });
+      }
+      zadanie18();
+      function zadanie19() {
+        console.log("zadanie19");
+        document
+          .getElementById("przeslij")
+          .addEventListener("click", function () {
+            let email = document.getElementById("email").value;
+            console.log("Wprowadzony email:", email);
+          });
+      }
+      zadanie19();
+      function zadanie20() {
+        console.log("zadanie20");
+        document.getElementById("wiek").addEventListener("input", function () {
+          let wiek = document.getElementById("wiek").value;
+          if (wiek < 18) {
+            console.log("Musisz mieć ukończone 18 lat");
+          }
+        });
+      }
+      zadanie20();
+      function zadanie21() {
+        console.log("zadanie21");
+        // Walidacja pola email
+        document.getElementById("email").addEventListener("input", function () {
+          let email = document.getElementById("email");
+          if (!email.value.includes("@")) {
+            email.style.borderColor = "red";
+          } else {
+            email.style.borderColor = "green";
+          }
+        });
+      }
+      zadanie21();
+      function zadanie22() {
+        console.log("zadanie22");
+        document
+          .getElementById("formularz")
+          .addEventListener("submit", function (event) {
+            let nazwa = document.getElementById("nazwa").value;
+            if (nazwa.trim() === "") {
+              event.preventDefault();
+              alert("Pole nazwa nie może być puste.");
+            }
+          });
+      }
+      zadanie22();
+    </script>
+  </body>
+</html>
