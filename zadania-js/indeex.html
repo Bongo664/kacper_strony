@@ -43,9 +43,10 @@
 
       function zadanie2i3() {
         console.log("zadanie2 i 3");
-        let imie = "Jan";
-        let wiek = 25;
-        console.log("Imię: " + imie + ", Wiek: " + wiek);
+        // Deklaracja zmiennych imie i wiek
+        let imie = "Jan"; // Przypisanie wartości "Jan" do zmiennej imie
+        let wiek = 25; // Przypisanie wartości 25 do zmiennej wiek
+        console.log("Imię: " + imie + ", Wiek: " + wiek); // Wyświetlenie wartości imie i wiek w konsoli
       }
       zadanie2i3();
 
@@ -80,7 +81,17 @@
         console.log(a || b);
       }
       zadanie6();
-
+      function zadanie7() {
+        let wiek = prompt("Podaj swój wiek:");
+        if (wiek < 13) {
+          console.log("Dziecko");
+        } else if (wiek < 18) {
+          console.log("Nastolatek");
+        } else if (wiek < 65) {
+          console.log("Dorosły");
+        }
+      }
+      zadanie7();
       function zadanie8() {
         console.log("zadanie8");
         let owoce = ["jabłko", "banan", "pomarańcza"];
