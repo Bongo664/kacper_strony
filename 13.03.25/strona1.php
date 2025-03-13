@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona 1</title>
+</head>
+<body>
+    <form method="post" action="strona2.php">
+        <label for="imie">Imię:</label>
+        <input type="text" id="imie" name="imie"><br>
+        <label for="wiek">Wiek:</label>
+        <input type="text" id="wiek" name="wiek"><br>
+        <input type="submit" value="Dalej">
+    </form>
+</body>
+</html>
