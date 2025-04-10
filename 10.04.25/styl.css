@@ -1,0 +1,69 @@
+*{
+    font-family: serif;
+    text-align: center;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+header, footer{
+    background-color: indigo;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+}
+footer{
+    margin-top:50px;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90vh;
+    width: 97.67vw;
+}
+div{
+    height: 470px;
+    width: 100%;
+}
+a{
+    color: white;
+}
+.efekty{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.efekty > p{
+    margin: 0;
+}
+#zastosuj{
+    background-color:slateblue;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    margin-top:10px;
+    
+}
+img{
+    margin: 10px;
+    padding:3px;
+    border: 2px dashed slateblue;
+}
+.efekty3{
+    height: auto;
+}
+#kosz{
+    width: 500px;
+}
+#zolw{
+    width: 500px;
+}
+.efekty4{
+    height: auto;
+}
+input{
+    color:white;
+}
+#zastosuj:hover{
+    background-color: indigo;
+    cursor: pointer;
+}

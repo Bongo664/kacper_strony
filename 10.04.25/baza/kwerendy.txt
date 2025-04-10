@@ -1,0 +1,4 @@
+1. SELECT * FROM `pracownicy` WHERE staz < 5
+2. SELECT s.nazwa AS 'Nazwa stanowiska', ROUND(AVG(p.pensja), 2) AS 'Średnia pensja' FROM pracownicy p JOIN stanowiska s ON p.stanowiska_id = s.id GROUP BY s.nazwa ORDER BY 'Średnia pensja';
+3. SELECT imie, nazwisko, pensja FROM pracownicy WHERE pensja = ( SELECT MAX(pensja) FROM pracownicy );
+4. UPDATE pracownicy SET staz = staz + 1;

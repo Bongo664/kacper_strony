@@ -66,7 +66,7 @@
 
     <h3>5. Usuwanie pliku</h3>
     <div class="wynik">
-   <?php/* 
+   <?php /* 
     if(unlink("test.txt")) {
         echo "Plik został usunięty";
     } else {
